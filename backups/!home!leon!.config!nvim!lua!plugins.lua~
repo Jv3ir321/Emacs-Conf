@@ -1,0 +1,113 @@
+require("lazy").setup({
+
+-- ====================
+-- STATUS BAR
+-- ====================
+
+{
+    "nvim-lualine/lualine.nvim",
+
+    config = function()
+
+        require("lualine").setup({
+
+            options = {
+                theme = "auto", -- usa colores terminal
+                section_separators = "",
+                component_separators = ""
+            }
+
+        })
+    end
+},
+
+-- ====================
+-- LSP
+-- ====================
+
+{
+    "neovim/nvim-lspconfig",
+
+    config = function()
+
+        local lsp = require("lspconfig")
+
+        lsp.clangd.setup({})
+        lsp.pyright.setup({})
+        lsp.lua_ls.setup({})
+        lsp.rust_analyzer.setup({})
+
+    end
+},
+
+-- ====================
+-- AUTOCOMPLETADO
+-- ====================
+
+{
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+        "hrsh7th/cmp-nvim-lsp",
+    },
+
+    config = function()
+
+        local cmp = require("cmp")
+
+        cmp.setup({
+
+            mapping = cmp.mapping.preset.insert({
+
+                ["<Tab>"] = cmp.mapping.select_next_item(),
+
+                ["<CR>"] = cmp.mapping.confirm()
+
+            }),
+
+            sources = {
+
+                { name = "nvim_lsp" }
+
+            }
+
+        })
+
+    end
+},
+
+-- ====================
+-- TREESITTER
+-- ====================
+
+{
+    "nvim-treesitter/nvim-treesitter",
+
+    build = ":TSUpdate",
+
+    config = function()
+
+        require("nvim-treesitter.configs").setup({
+
+            highlight = {
+                enable = true
+            }
+
+        })
+
+    end
+},
+
+-- ====================
+-- FUZZY FINDER
+-- ====================
+
+{
+    "nvim-telescope/telescope.nvim",
+
+    dependencies = {
+        "nvim-lua/plenary.nvim"
+    }
+
+}
+
+})

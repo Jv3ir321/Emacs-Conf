@@ -1,0 +1,40 @@
+-- ====================
+-- CONFIG BASICA
+-- ====================
+
+vim.g.mapleader = " "
+
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+vim.opt.mouse = "a"
+vim.opt.clipboard = "unnamedplus"
+
+vim.opt.termguicolors = true
+
+-- IMPORTANTE:
+-- usa colores de la terminal
+vim.cmd("colorscheme default")
+
+-- ====================
+-- Lazy bootstrap
+-- ====================
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "https://github.com/folke/lazy.nvim",
+        lazypath
+    })
+end
+
+vim.opt.rtp:prepend(lazypath)
+
+require("plugins")
