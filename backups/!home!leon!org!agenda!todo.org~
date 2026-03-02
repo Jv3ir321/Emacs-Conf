@@ -3,9 +3,41 @@
 ** DAILY
 
 *** TODO Leer
+SCHEDULED: <2026-03-01 dom +1d>
+:PROPERTIES:
+:STYLE: habit
+:LAST_REPEAT: [2026-02-28 sáb 09:40]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-28 sáb 09:40]
+:END:
+
 *** TODO Entrenar
+SCHEDULED: <2026-03-01 dom +1d>
+:PROPERTIES:
+:STYLE: habit
+:LAST_REPEAT: [2026-02-28 sáb 14:35]
+:END:
+:LOGBOOK:
+- State "☑ DONE"     from ""           [2026-02-28 sáb 14:35]
+:END:
+
 *** TODO Cepillarme 3 veces al dia
+SCHEDULED: <2026-02-28 sáb +1d>
+:PROPERTIES:
+:STYLE: habit
+:END:
+
 *** TODO Levantarme a las 6 AM
+SCHEDULED: <2026-03-01 dom +1d>
+:PROPERTIES:
+:STYLE: habit
+:LAST_REPEAT: [2026-02-28 sáb 10:58]
+:END:
+:LOGBOOK:
+- State "☑ DONE"     from ""           [2026-02-28 sáb 10:58]
+:END:
+
 
 ** ACADEMICO:
 
@@ -15,14 +47,17 @@ DEADLINE: <2026-03-04 mié>
 *** TODO Estudiar para quiz algoritmos y programacion(Hacer ejercicios propuestos)
 DEADLINE: <2026-03-04 mié>
 
-*** TODO Estudiar para quiz Calculo(Todo lo dado hasta el momento + limites)
+*** TODO Estudiar para quiz Calculo(Todo lo dado hasta el momento + limites, Funciones Log, Exp, Ecuaciones Log y Exp)
 DEADLINE: <2026-03-04 mié>
 
 *** TODO Hacer tarea Produccion y Comprension Textual
 DEADLINE: <2026-03-04 mié>
 
 *** TODO Hacer ejercicios clase Fundamentos De Matematicas
-DEADLINE: <2026-03-03 mar>
+DEADLINE: <2026-03-04 mié>
+
+*** ☑ DONE TODO Hacer ejercicios de Calculo (Pares)
+DEADLINE: <2026-03-04 mié>
 
 *** TODO Adelantar Capitulo Logica de Discrete Math, Epp
 DEADLINE: <2026-03-02 lun>
@@ -31,7 +66,24 @@ DEADLINE: <2026-03-02 lun>
 ** EXTRACURRICULAR:
 
 *** TODO Estudiar para RESAPLEN, Competitive Programming
+SCHEDULED: <2026-02-28 sáb +1d>
+:PROPERTIES:
+:STYLE: habit
+:END:
 
-*** TODO Hacer curso de Google Cloud Computing
+*** ☐ TODO Hacer leccion curso de Google Cloud Computing
+SCHEDULED: <2026-03-01 dom +1d>
+:PROPERTIES:
+:STYLE: habit
+:LAST_REPEAT: [2026-02-28 sáb 22:42]
+:END:
+:LOGBOOK:
+- State "☑ DONE"     from "☐ TODO"     [2026-02-28 sáb 22:42]
+:END:
 
-*** TODO Estudiar Rust 
+*** TODO Estudiar Rust
+SCHEDULED: <2026-02-28 sáb +1d>
+:PROPERTIES:
+:STYLE: habit
+:END:
+

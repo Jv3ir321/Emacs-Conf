@@ -3,11 +3,9 @@
 ;; =========================
 
 (setq gc-cons-threshold (* 50 1000 1000))
-
-(setq inhibit-startup-message t)
-(setq initial-scratch-message "")
+(setq inhibit-startup-message t) 
 (setq ring-bell-function 'ignore)
-
+(setq initial-scratch-message "")
 ;; =========================
 ;; UI LIMPIA
 ;; =========================
@@ -70,7 +68,7 @@
 ;; TAB-LINE ESTILO KANAGAWA
 ;; =========================
 
-(global-tab-line-mode 1)
+(global-tab-line-mode 0)
 
 (setq tab-line-close-button-show nil)
 (setq tab-line-new-button-show nil)
@@ -78,26 +76,14 @@
 
 ;; colores estilo kanagawa-wave
 (custom-set-faces
- '(tab-line
-   ((t (:background "#1f1f28"
-        :foreground "#727169"
-        :box nil))))
-
- '(tab-line-tab
-   ((t (:background "#2a2a37"
-        :foreground "#c8c093"
-        :box (:line-width 6 :color "#2a2a37")))))
-
- '(tab-line-tab-current
-   ((t (:background "#363646"
-        :foreground "#e6c384"
-        :box (:line-width 6 :color "#363646")
-        :weight bold))))
-
- '(tab-line-tab-inactive
-   ((t (:background "#1f1f28"
-        :foreground "#727169"
-        :box (:line-width 6 :color "#1f1f28"))))))
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(tab-line ((t (:background "#1f1f28" :foreground "#727169" :box nil))))
+ '(tab-line-tab ((t (:background "#2a2a37" :foreground "#c8c093" :box (:line-width 6 :color "#2a2a37")))))
+ '(tab-line-tab-current ((t (:background "#363646" :foreground "#e6c384" :box (:line-width 6 :color "#363646") :weight bold))))
+ '(tab-line-tab-inactive ((t (:background "#1f1f28" :foreground "#727169" :box (:line-width 6 :color "#1f1f28"))))))
 ;; =========================
 ;; EVIL MODE
 ;; =========================
@@ -164,13 +150,19 @@
 (setq org-agenda-files '("~/org/agenda/"))
 
 (setq org-default-notes-file
-      (concat org-directory "/notes.org"))
+      (concat org-directory "/todo.org"))
 
 (setq org-startup-indented t)
 
 (setq org-hide-emphasis-markers t)
 
 (setq org-log-into-drawer t)
+
+(use-package org-modern
+  :hook (org-mode . org-modern-mode))
+
+(setq org-todo-keywords
+      '((sequence "☐ TODO(t)" "☑ DONE(d)")))
 ; =========================
 ;; MEJORAS GENERALES
 ;; =========================
@@ -205,7 +197,7 @@
 
 (set-face-attribute 'default nil
                     :font "CaskaydiaCove Nerd Font"
-                    :height 160)
+                    :height 140)
 
 ;; =========================
 ;; FINAL
@@ -218,9 +210,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
